@@ -1,5 +1,5 @@
 <?php
-class Persona
+abstract class Persona
 {
     private $_apellido;
     private $_nombre;
@@ -31,11 +31,11 @@ class Persona
         return $this->_sexo;
     }
 
-    public abstract function Hablar($idioma[]);
+    //abstract public function Hablar($idioma);
 
     public function ToString()
     {
-        return "Nombre y Apellido: ".$this->GetNombre()." -- ".$this->GetApellido."</br>Sexo: ".$this->GetEdad()."</br>Dni: ".$this->GetDni();
+        return $this->GetNombre()." ".$this->GetApellido()." - ".$this->GetEdad()." - ".$this->GetDni();
     }
 
 

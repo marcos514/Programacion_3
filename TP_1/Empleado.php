@@ -8,7 +8,7 @@ class Empleado extends Persona
 
     public function __construct($nombre,$apellido,$dni,$sexo,$legajo,$sueldo,$turno)
     {
-        parent->__construct();
+        parent::__construct($nombre,$apellido,$dni,$sexo);
         $this->_legajo=$legajo;
         $this->_sueldo=$sueldo;
         $this->_turno=$turno;
@@ -18,7 +18,7 @@ class Empleado extends Persona
 
     public function GetLegajo()
     {
-        return $this->_legjo;
+        return $this->_legajo;
     }
 
     public function GetSueldo()
@@ -30,6 +30,24 @@ class Empleado extends Persona
     {
         return $this->_turno;
     }
+
+    public function Hablar($idioma)
+    {
+        $idiomas;
+        $retorno=" - El empleado habla ";
+        foreach($idioma as $idiomas)
+        {
+            $retorno=$retorno.", ".$idiomas;
+        }
+        return $retorno;
+    }
+
+    public function toString()
+    {
+        return parent::toString()." - ".$this->getSueldo()." - ".$this->getTurno()." - ".$this->GetLegajo()." - ".$this->Hablar(array("Español","Ingles"));
+    }
+
+
 
     
 
