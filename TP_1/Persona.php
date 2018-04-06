@@ -31,7 +31,7 @@ abstract class Persona
         return $this->_sexo;
     }
 
-    //abstract public function Hablar($idioma);
+    abstract public function Hablar($idioma);
 
     public function ToString()
     {

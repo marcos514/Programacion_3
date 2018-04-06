@@ -26,9 +26,9 @@ class Fabrica
     public function CalcularSueldo()
     {
         $sueldos=0;
-        for($i=0;$i<$this->_empleados->count;$i++)
-        {
-            $sueldos+=$this->empleados[$i]->_sueldo;
+        foreach($this->_empleados as $persona)
+        { 
+            $sueldos=$sueldos+$persona[0]->GetSueldo();
         }
         return $sueldos;
     }
@@ -50,23 +50,24 @@ class Fabrica
 
     private function EliminarEmpleadoRepetido()
     {
-        $comp[]=$this->_empleados;
-        $this->_empleados=array_unique($comp);
+        $comp[]=array_merge($this->_empleados);
+        $this->_empleados=array_merge(array_unique($comp));
     }
 
 
     public function ToString()
     {
-        $persona=new Empleado("Marcos","Rey",41435394,"M",10,22222,"Mañana");
-        $a="<br>Empleados de ".$this->_razonSocial;
-        foreach($this->_empleados as $persona)
+        $persona=10;
+        $retorno="<br>Empleados de ".$this->_razonSocial;
+        
+       // for($i=0;$i<count($this->_empleados);$i++)
+       foreach($this->_empleados[count($this->_empleados)] as $persona)
         {
-            
-            $a=$a."<br>".$persona->toString();
-            $this->AgregarEmpleado($persona);
+            echo "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            $retorno.=$persona->ToString();
         }
-        $a=$a."<br>Y la suma de los sueldos es: ".$this->CalcularSueldo();
-        return $a;
+        $retorno=$retorno."<br>Y la suma de los sueldos es: ".$this->CalcularSueldo();
+        return $retorno;
     }
 
 

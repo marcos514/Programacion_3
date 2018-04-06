@@ -42,9 +42,9 @@ class Empleado extends Persona
         return $retorno;
     }
 
-    public function toString()
+    public function ToString()
     {
-        return parent::toString()." - ".$this->getSueldo()." - ".$this->getTurno()." - ".$this->GetLegajo()." - ".$this->Hablar(array("Español","Ingles"));
+        return parent::ToString()." - ".$this->getSueldo()." - ".$this->getTurno()." - ".$this->GetLegajo()." - ".$this->Hablar(array("Español","Ingles"));
     }
 
 
