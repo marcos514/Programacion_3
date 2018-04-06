@@ -4,14 +4,14 @@ include_once "Persona.php";
 class Fabrica
 {
     private $_cantidadMaxima;
-    private $_empleados;
+    public $_empleados;
     private $_razonSocial;
 
     public function __construct($razonSocial)
     {
         $this->_razonSocial=$razonSocial;
         $this->_cantidadMaxima=5;
-        $this->_empleados[]=array();
+        $this->_empleados=array();
     }
 
     public function AgregarEmpleado($emp)
@@ -28,7 +28,7 @@ class Fabrica
         $sueldos=0;
         foreach($this->_empleados as $persona)
         { 
-            $sueldos=$sueldos+$persona[0]->GetSueldo();
+            $sueldos=$sueldos+$persona->GetSueldo();
         }
         return $sueldos;
     }
@@ -50,20 +50,17 @@ class Fabrica
 
     private function EliminarEmpleadoRepetido()
     {
-        $comp[]=array_merge($this->_empleados);
-        $this->_empleados=array_merge(array_unique($comp));
+        $this->_empleados=array_unique($this->_empleados, SORT_REGULAR);
     }
 
 
     public function ToString()
     {
-        $persona=10;
         $retorno="<br>Empleados de ".$this->_razonSocial;
         
        // for($i=0;$i<count($this->_empleados);$i++)
-       foreach($this->_empleados[count($this->_empleados)] as $persona)
+       foreach($this->_empleados as $persona)
         {
-            echo "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             $retorno.=$persona->ToString();
         }
         $retorno=$retorno."<br>Y la suma de los sueldos es: ".$this->CalcularSueldo();
