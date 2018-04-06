@@ -56,14 +56,14 @@ class Fabrica
 
     public function ToString()
     {
-        $retorno="<br>Empleados de ".$this->_razonSocial;
+        $retorno="<br>Empleados de ".$this->_razonSocial."<br>";
         
        // for($i=0;$i<count($this->_empleados);$i++)
        foreach($this->_empleados as $persona)
         {
-            $retorno.=$persona->ToString();
+            $retorno.=$persona->ToString()."<br>";
         }
-        $retorno=$retorno."<br>Y la suma de los sueldos es: ".$this->CalcularSueldo();
+        $retorno=$retorno." <br> Y la suma de los sueldos es: ".$this->CalcularSueldo();
         return $retorno;
     }
 
