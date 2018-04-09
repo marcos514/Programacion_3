@@ -13,28 +13,15 @@ function ValidarCombo(valor:string,anular:string):boolean
 
 function ObtenerTurnoSeleccionado():string
 {
-    if((<HTMLInputElement>document.getElementById("tManiana")).checked)
-    {
-        return "Mañana";
-    }
-    if((<HTMLInputElement>document.getElementById("tTarde")).checked)
-    {
-        return "Tarde";
-    }
-    if((<HTMLInputElement>document.getElementById("tNoche")).checked)
-    {
-        return "Noche";
-    }
-    return"";
-    /*let valores=document.getElementsByName("rdoTurno");
+    let valores=document.getElementsByName("rdoTurno");
     for(let i:number=0;i<valores.length;i++)
     {
         if((<HTMLInputElement>valores[i]).checked)
         {
-            return <string>valores[i].;
+            return (<HTMLInputElement>valores[i]).value;
         }
     }
-    return "";*/
+    return "";
 }
 
 function ObtenerSueldoMaximo(turno:string):number
@@ -120,23 +107,9 @@ function AdministrarValidaciones():void
         comprobador=false;
     }
 
-    if(!comprobador)
+    if(comprobador)
     {
         (<HTMLFormElement>document.getElementById("frmEmpleado")).submit();
     }
-
-
-
     
-    
-
-    
-
-    
-    
-    
-
-    
-    
-
 }

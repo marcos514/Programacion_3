@@ -40,37 +40,50 @@ function ObtenerSueldoMaximo(turno) {
     }
 }
 function AdministrarValidaciones() {
+    var comprobador = true;
     if (ValidarCamposVacios(document.getElementById("txtDni").value)) {
         if (!ValidarRangoNumerico(document.getElementById("txtDni").valueAsNumber, 1000000, 55000000)) {
             alert("El dni no respeta los limites");
+            comprobador = false;
         }
     }
     else {
         alert("Ingrese Dni");
+        comprobador = false;
     }
     if (!ValidarCamposVacios(document.getElementById("txtApellido").value)) {
         alert("Ingresar Apellido");
+        comprobador = false;
     }
     if (!ValidarCamposVacios(document.getElementById("txtNombre").value)) {
         alert("Ingresar Nombre");
+        comprobador = false;
     }
     if (!ValidarCombo(document.getElementById("cboSexo").value, "--")) {
         alert("Seleccione su sexo");
+        comprobador = false;
     }
     if (ValidarCamposVacios(document.getElementById("txtLegajo").value)) {
         if (!ValidarRangoNumerico(document.getElementById("txtLegajo").valueAsNumber, 100, 550)) {
             alert("El Legajo no respeta los limites");
+            comprobador = false;
         }
     }
     else {
         alert("Ingresar el legajo");
+        comprobador = false;
     }
     if (ValidarCamposVacios(document.getElementById("txtSueldo").value)) {
         if (!ValidarRangoNumerico(document.getElementById("txtSueldo").valueAsNumber, 8000, ObtenerSueldoMaximo(ObtenerTurnoSeleccionado()))) {
             alert("El Sueldo no respeta los limites");
+            comprobador = false;
         }
     }
     else {
         alert("Ingresar el sueldo");
+        comprobador = false;
+    }
+    if (comprobador) {
+        document.getElementById("frmEmpleado").submit();
     }
 }
