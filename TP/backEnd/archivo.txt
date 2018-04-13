@@ -1,2 +1,1 @@
-marcos marcos - Masculino - 1000000 - 8000 - Mañana - 100 -  - El empleado habla , Español, Inglesmarcos marcos - Masculino - 1000000 - 8000 - Mañana - 100 -  - El empleado habla , Español, Ingles
-4 4 - Masculino - 1000000 - 8000 - Mañana - 100 -  - El empleado habla , Español, Ingles
+s - s - Femenino - 1000019 - 8000 - Mañana - 118 - El empleado habla , Español, Ingles

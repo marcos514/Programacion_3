@@ -34,7 +34,7 @@ class Empleado extends Persona
     public function Hablar($idioma)
     {
         $idiomas;
-        $retorno=" - El empleado habla ";
+        $retorno="El empleado habla ";
         foreach($idioma as $idiomas)
         {
             $retorno=$retorno.", ".$idiomas;

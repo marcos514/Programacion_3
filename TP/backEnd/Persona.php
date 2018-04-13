@@ -35,7 +35,7 @@ abstract class Persona
 
     public function ToString()
     {
-        return $this->GetNombre()." ".$this->GetApellido()." - ".$this->GetEdad()." - ".$this->GetDni();
+        return $this->GetNombre()." - ".$this->GetApellido()." - ".$this->GetEdad()." - ".$this->GetDni();
     }
 
 
