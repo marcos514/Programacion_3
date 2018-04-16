@@ -93,6 +93,7 @@ class Fabrica implements IArchivo
             }
             $i++;
         }
+        $i=-1;
         return $retorno;
     }
 
@@ -143,7 +144,6 @@ class Fabrica implements IArchivo
                 {
                     
                     $empleado=new Empleado($auxEmpleado[1],$auxEmpleado[0],$auxEmpleado[3],$auxEmpleado[2],$auxEmpleado[6],$auxEmpleado[4],$auxEmpleado[5]);
-                    echo $empleado->ToString();
                     $this->AgregarEmpleado($empleado);  
                 }
                 

@@ -7,7 +7,7 @@ $fabrica->TraerDeArchivo("archivo.txt");
 $empleadoLugar=$fabrica->EliminarEmpleadoRepetidoLegajo((int)$_GET["legajo"]);
 if($empleadoLugar!=-1)
 {
-    if($fabrica->EliminarEmpleado(($fabrica->GetEmpleados())[$empleadoLugar]))
+    if($fabrica->EliminarEmpleado($fabrica->GetEmpleados()[$empleadoLugar]))
     {
         $fabrica->GuardarEnArchivo("archivo.txt");
         echo "<a href='mostrar.php'><h2>Mostrar los empleados</h2></a>";

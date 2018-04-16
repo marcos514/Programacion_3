@@ -6,12 +6,12 @@ include_once "Persona.php";
 include_once "Fabrica.php";
 $fabrica=new Fabrica("Marcos S.A",7);
 $fabrica->TraerDeArchivo("archivo.txt");
-$totalEmpleados=$fabrica->GetEmpleados();
-$html="Empleados";
-for($i=0;$i<count($totalEmpleados)-1;$i++)
+echo ("<html><body><h1>Empleados</h1>");
+foreach($fabrica->GetEmpleados() as $empleado)
 {
-    $html=$html."<h2><a href='eliminar.php?legajo=".$totalEmpleados[$i]->GetLegajo().">".$totalEmpleados[$i]->ToString()." --- ELIMINAR</a></h2>";
+    echo ("<h2>".$empleado->ToString()."<a href='eliminar.php?legajo=".$empleado->GetLegajo()."'>ELIMINAR</a></h2>");
 }
+echo "<a href='../frontEnd'><h2>Volver a agregar un empleado</h2></a>";
 
 /*$archivo=fopen("archivo.txt","r");
 if($archivo!=null)
@@ -55,10 +55,3 @@ fclose($archivo);*/
 
 ?>
 
-
-
-<html>
-    <body>
-        <?php echo $html;?>
-    </body>
-</html>
