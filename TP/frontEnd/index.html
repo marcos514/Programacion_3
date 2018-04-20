@@ -18,15 +18,15 @@
             <tr>
                 <td>DNI:</td>
                <!--  <td colspan="2" ><input type="text" id="txtDni"/> </td>-->
-                <td colspan="2"><input type="number" name="txtDni" id="txtDni" min="1000000" max="55000000" step="1"></td>
+                <td colspan="2"><input type="number" name="txtDni" id="txtDni" min="1000000" max="55000000" step="1"><span id="spnDni" style="display:none">*</span></td>
             </tr>
             <tr>
                 <td>Apellido:</td>
-                <td colspan="2"><input type="text" id="txtApellido" name="txtApellido"/> </td>
+                <td colspan="2"><input type="text" id="txtApellido" name="txtApellido"/><span id="spnApellido" style="display:none">*</span></td>
             </tr>
             <tr>
                 <td>Nombre:</td>
-                <td colspan="2"><input type="text" id="txtNombre" name="txtNombre"/> </td>
+                <td colspan="2"><input type="text" id="txtNombre" name="txtNombre"/><span id="spnNombre" style="display:none">*</span> </td>
             </tr>
             <tr>
                 <td>Sexo:</td>
@@ -35,7 +35,8 @@
                         <option value="--">Seleccione</option>
                         <option value="M">Masculino</option>
                         <option value="F">Femenino</option>
-                    </select>					
+                    </select>
+                    <span id="spnSexo" style="display:none">*</span>					
                 </td>
             </tr>
             <thread>
@@ -46,11 +47,11 @@
             </thread>
             <tr>
                 <td>Legajo:</td>
-                <td colspan="2"><input type="number" name="txtLegajo" id="txtLegajo" min="100" max="550" step="1"></td>
+                <td colspan="2"><input type="number" name="txtLegajo" id="txtLegajo" min="100" max="550" step="1"><span id="spnLegajo" style="display:none">*</span></td>
             </tr>
             <tr>
                 <td>Sueldo:</td>
-                <td colspan="2"><input type="number"  id="txtSueldo" name="txtSueldo" min="8000" max="999999999999999999" step="500"> </td>
+                <td colspan="2"><input type="number"  id="txtSueldo" name="txtSueldo" min="8000" max="999999999999999999" step="500"><span id="spnSueldo" style="display:none">*</span> </td>
             </tr>
             <tr>
                 <td>Turno:</td>

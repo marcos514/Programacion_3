@@ -1,1 +1,1 @@
-s - s - Femenino - 1000019 - 8000 - Mañana - 118 - El empleado habla , Español, Ingles
+MARCOS - REY - Masculino - 1000021 - 8500 - Mañana - 120 - El empleado habla , Español, Ingles
