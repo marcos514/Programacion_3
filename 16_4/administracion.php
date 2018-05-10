@@ -1,5 +1,4 @@
 <?php
-$ruta=$_FILES["archivo"]["name"];
 $extencion=pathinfo($_FILES["archivo"]["name"],PATHINFO_EXTENSION);
 if($extencion!="png"&&$extencion!="jpg"&&$extencion!="jpeg")
 {

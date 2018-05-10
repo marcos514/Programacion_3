@@ -6,6 +6,8 @@ function ValidarRangoNumerico(valor:number,min:number,max:number):boolean
 {
     return valor<=max&&valor>=min;
 }
+
+
 function ValidarCombo(valor:string,anular:string):boolean
 {
     return !(valor==anular);
@@ -114,7 +116,7 @@ function AdministrarValidaciones():void
     
 }
 
-function AdministrarValidacionesLogin():boolean
+function AdministrarValidacionesLogin()
 {
     let comprobador=true;
     if(ValidarCamposVacios((<HTMLInputElement>document.getElementById("txtDni")).value))
@@ -137,5 +139,8 @@ function AdministrarValidacionesLogin():boolean
         comprobador=false;
     }
 
-    return comprobador;
+    if(comprobador)
+    {
+        (<HTMLFormElement>document.getElementById("frmLogin")).submit();
+    }
 }

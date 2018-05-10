@@ -1,1 +1,6 @@
-MARCOS - REY - Masculino - 1000021 - 8500 - Mañana - 120 - El empleado habla , Español, Ingles
+a - a - Masculino - 1000000 - 8000 - Mañana - 100 - El empleado habla , T - fotos/1000000-a.jpg
+
+a - a - Masculino - 1000001 - 8000 - Mañana - 101 - El empleado habla , T - fotos/1000001-a.jpg
+
+a - a - Masculino - 1000002 - 8500 - Mañana - 102 - El empleado habla , T - fotos/1000002-a.png
+Marcos - Rey - Masculino - 1000011 - 9000 - Mañana - 119 - El empleado habla , T - fotos/1000011-Rey.jpg

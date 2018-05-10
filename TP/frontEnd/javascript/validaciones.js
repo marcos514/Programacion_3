@@ -92,6 +92,8 @@ function AdministrarValidacionesLogin() {
         document.getElementById("spnApellido").style.display = "block";
         comprobador = false;
     }
-    return comprobador;
+    if (comprobador) {
+        document.getElementById("frmLogin").submit();
+    }
 }
 //# sourceMappingURL=validaciones.js.map
