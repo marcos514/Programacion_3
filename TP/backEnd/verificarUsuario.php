@@ -3,11 +3,12 @@ session_start();
 include_once "Empleado.php";
 include_once "Persona.php";
 include_once "Fabrica.php";
-$verPost=isset($_GET)? true:false;
-if($verPost)
+$verPost=isset($_POST)? true:false;
+if($verPost!=false)
 {
     $dni=$_POST["txtDni"];
     $apellido=$_POST["txtApellido"];
+    
     $fabrica=new Fabrica("Marcos S.A",7);
     $fabrica->TraerDeArchivo("archivo.txt");
     if($fabrica->GetIndexEmpleado_DniApellido($dni,$apellido)>=0)

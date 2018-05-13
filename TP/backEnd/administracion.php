@@ -3,21 +3,43 @@ include_once "Empleado.php";
 include_once "Persona.php";
 include_once "Fabrica.php";
 
+if(isset($_POST["hdnModificar"]))
+{
+    $fabrica=new Fabrica("Marcos S.A.",7);
+    $fabrica->TraerDeArchivo("../backend/archivos/empleados.txt");
+    $fabrica=new Fabrica("Marcos S.A",7);
+    $fabrica->TraerDeArchivo("./archivos/empleados.txt");
+    $empleadoLugar=$fabrica->GetIndexEmpeado_Legajo((int)$_POST["txtLegajo"]);
+    if($empleadoLugar!=-1)
+    {
+        $empleado=$fabrica->GetEmpleados()[$empleadoLugar];
+        $pathFoto=$empleado->GetPathFoto();
+        if($fabrica->EliminarEmpleado($fabrica->GetEmpleados()[$empleadoLugar]))
+        {
+            unlink(trim($pathFoto));
+            $fabrica->GuardarEnArchivo("./archivos/empleados.txt");
+        }
+    }
+}
+
 $extencion=pathinfo($_FILES["imgEmpleado"]["name"],PATHINFO_EXTENSION);
 $tmp_name=$_FILES["imgEmpleado"]["tmp_name"];
 $pathFin=trim("fotos/".$_POST["txtDni"]."-".$_POST["txtApellido"].".".$extencion);
 
 if(($extencion!="png"&&$extencion!="jpg"&&$extencion!="jpeg") )
 {
-    echo "Error, no es una foto<br><a href='../frontEnd'><h2>Volver a agregar un empleado</h2></a>";
+    echo "Error, no es una foto<br><a href='../frontEnd/index.php'><h2>Volver a agregar un empleado</h2></a>";
+    $validador=false;
 }
 else if( $_FILES["imgEmpleado"]["size"]>1000000)
 {
-    echo "Error, foto demaciado grande maximo 1GB<br><a href='../frontEnd'><h2>Volver a agregar un empleado</h2></a>";
+    $validador=false;
+    echo "Error, foto demaciado grande maximo 1GB<br><a href='../frontEnd/index.php'><h2>Volver a agregar un empleado</h2></a>";
 }
 else if(file_exists($pathFin)==true)
 {
-    echo "Error, foto ya existente<br><a href='../frontEnd'><h2>Volver a agregar un empleado</h2></a>";
+    $validador=false;
+    echo "Error, foto ya existente<br><a href='../frontEnd/index.php'><h2>Volver a agregar un empleado</h2></a>";
 }
 else
 {
@@ -46,7 +68,7 @@ else
     }
     else
     {
-        echo "<h2>Error Empleados repetido o Capacidad Maxima Alzada</h2><a href='../frontEnd'><h2>Volver a agregar un empleado</h2></a>";
+        echo "<h2>Error Empleados repetido o Capacidad Maxima Alzada</h2><a href='../frontEnd/index.php'><h2>Volver a agregar un empleado</h2></a>";
     }
     
 }

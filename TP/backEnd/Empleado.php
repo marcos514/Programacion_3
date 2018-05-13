@@ -56,7 +56,7 @@ class Empleado extends Persona
 
     public function ToString()
     {
-        return parent::ToString()." - ".$this->getSueldo()." - ".$this->getTurno()." - ".$this->GetLegajo()." - ".$this->Hablar(array("T"))." - ".$this->GetPathFoto();
+        return parent::ToString()." - ".$this->getSueldo()." - ".$this->getTurno()." - ".$this->GetLegajo()." - ".$this->Hablar(array("T"))." - ".trim($this->GetPathFoto());
     }
 
 

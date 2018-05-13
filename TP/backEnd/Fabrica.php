@@ -102,7 +102,6 @@ class Fabrica implements IArchivo
             }
             $i++;
         }
-        $i=-1;
         return $retorno;
     }
 
