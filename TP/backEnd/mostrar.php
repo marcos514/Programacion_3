@@ -4,7 +4,7 @@
 include_once "Empleado.php";
 include_once "Persona.php";
 include_once "Fabrica.php";
-include_once "../backend/validarSesion.php";
+include("../backend/validarSesion.php");
 $fabrica=new Fabrica("Marcos S.A",7);
 $fabrica->TraerDeArchivo("./archivos/empleados.txt");
 if(count($fabrica->GetEmpleados())>0)
@@ -39,7 +39,7 @@ if(count($fabrica->GetEmpleados())>0)
                 </td>
             </tr>";
     }
-    echo "<tr><td colspan='2'><hr /></td></tr></table><a href='../frontEnd/index.php'><h2>Volver a agregar un empleado</h2></a>";
+    echo "<tr><td colspan='2'><hr /></td></tr></table><a href='../frontEnd/index.php'><h2>Volver a agregar un empleado</h2></a><a href='./cerrarSesion.php'><h5>Cerrar Sesion</h5></a>";
 }
 else
 {

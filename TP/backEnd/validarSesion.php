@@ -1,7 +1,6 @@
 <?php
 session_start();
-$var=isset($_SESSION);
-if(!$var)
+if(isset($_SESSION["DNIEmpleado"])? false:true)
 {
     header("Location: ../frontend/login.html");
 }

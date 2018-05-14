@@ -1,6 +1,6 @@
 <?php
 include_once "../backend/Fabrica.php";
-include_once "../backend/validarSesion.php";
+include_once("../backend/validarSesion.php");
 
 $modificador=isset($_POST["dni"])? true:false;
 $alta_baja="Alta Empleado";
@@ -39,7 +39,7 @@ if($modificador==true)
             $sueldo="value='".$empleado->GetSueldo()."'  ";
             $foto="value='../backEnd/".$empleado->GetPathFoto()."'  ";
             $boton="Modificar ";
-            $hidden='<input type="hidden" id="hdnModificar" name="hdnModificar">/>';
+            $hidden='<input type="hidden" id="hdnModificar" name="hdnModificar"/>';
             switch ($empleado->GetTurno()) 
             {
                 case 'Tarde':
@@ -81,9 +81,9 @@ if($modificador==true)
     </head>
     <body>
         
-        <h2><?php echo $alta_baja;?></h2>
+        <h2><?php echo trim($alta_baja);?></h2>
         <form action="../backEnd/administracion.php" id="frmEmpleado" name="frmEmpleado" method="post" enctype="multipart/form-data">
-            <?php echo $hidden;?>
+            <?php echo $hidden?>
             <table  align="center">
             <thread>
                 <td colspan="3"><h4>Datos Personales</h4></td>
@@ -169,6 +169,11 @@ if($modificador==true)
                 <td colspan="3" style="text-align:right">
                     <input type="button" onclick="AdministrarValidaciones()" name="btnEnviar" value=<?php echo $boton;?>/>
                     <!--submit-->
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:right">
+                    <a href="../backEnd/cerrarSesion.php"><h5>Cerrar Sesion</h5></a>
                 </td>
             </tr>
             </table>

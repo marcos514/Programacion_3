@@ -10,7 +10,7 @@ if($verPost!=false)
     $apellido=$_POST["txtApellido"];
     
     $fabrica=new Fabrica("Marcos S.A",7);
-    $fabrica->TraerDeArchivo("archivo.txt");
+    $fabrica->TraerDeArchivo("./archivos/empleados.txt");
     if($fabrica->GetIndexEmpleado_DniApellido($dni,$apellido)>=0)
     {
         $_SESSION["DNIEmpleado"]="log";
