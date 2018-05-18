@@ -1,2 +1,1 @@
 a - a - Masculino - 1000000 - 8000 - Mañana - 100 - El empleado habla , T - fotos/1000000-a.jpg
-Marcos - Rey - Masculino - 1000001 - 12000 - Mañana - 101 - El empleado habla , T - fotos/1000001-Rey.jpg
