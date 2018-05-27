@@ -1,0 +1,4 @@
+{"precio":50,"cantidad":100,"nombre":"Marcossss","id":30,"path":"Fotos/29.jpg","genero":"Aventuda"}
+{"precio":50,"cantidad":100,"nombre":"Marcossss","id":31,"path":"Fotos/29.jpg","genero":"Aventuda"}
+{"precio":50,"cantidad":100,"nombre":"Marcossss","id":32,"path":"Fotos/29.jpg","genero":"Aventuda"}
+{"precio":50,"cantidad":100,"nombre":"Marcossss","id":33,"path":"Fotos/29.jpg","genero":"Aventuda"}

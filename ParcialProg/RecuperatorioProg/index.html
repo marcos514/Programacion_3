@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+</head>
+<body>
+
+    
+    <form action="administrar.php" method="POST" id="accion" name="accion"  enctype="multipart/form-data">
+        <input type="hidden" id="accion" name="accion" value='agregar'>
+        <input type="hidden" id="id" name="id" value='0'>
+        <input type="hidden" id="precio" name="precio" value='50'>
+        <input type="hidden" id="nombre" name="nombre" value='Marcossss'>
+        <input type="hidden" id="cantidad" name="cantidad" value='100'>
+        <input type="hidden" id="genero" name="genero" value='Aventuda'>
+        <input type="file" accept="image/*" name="img" id="img">
+
+        <input type="submit" value="Agregar">
+    </form>
+
+
+    <form action="administrar.php" method="POST" id="accion" name="accion"  enctype="multipart/form-data">
+        <input type="hidden" id="accion" name="accion" value='Eliminar'>
+        <input type="hidden" id="id" name="id" value='25'>
+        <input type="hidden" id="precio" name="precio" value='50'>
+        <input type="hidden" id="nombre" name="nombre" value='Marcossss'>
+        <input type="hidden" id="cantidad" name="cantidad" value='100'>
+        <input type="hidden" id="genero" name="genero" value='Aventuda'>
+
+        <input type="submit" value="Eliminar">
+    </form>
+
+
+    <form action="administrar.php" method="POST" id="accion" name="accion"  enctype="multipart/form-data">
+        <input type="hidden" id="accion" name="accion" value='TraerId'>
+        <input type="hidden" id="id" name="id" value='23'>
+        <input type="hidden" id="precio" name="precio" value='50'>
+        <input type="hidden" id="nombre" name="nombre" value='Marcossss'>
+        <input type="hidden" id="cantidad" name="cantidad" value='100'>
+        <input type="hidden" id="genero" name="genero" value='Aventuda'>
+
+        <input type="submit" value="Id">
+    </form>
+    <form action="administrar.php" method="POST" id="accion" name="accion"  enctype="multipart/form-data">
+        <input type="hidden" id="accion" name="accion" value='TraerNombre'>
+        <input type="hidden" id="id" name="id" value='0'>
+        <input type="hidden" id="precio" name="precio" value='50'>
+        <input type="hidden" id="nombre" name="nombre" value='Marcossss'>
+        <input type="hidden" id="cantidad" name="cantidad" value='100'>
+        <input type="hidden" id="genero" name="genero" value='Aventuda'>
+
+        <input type="submit" value="Nombre">
+    </form>
+
+
+
+    <form action="administrar.php" method="POST" id="accion" name="accion"  enctype="multipart/form-data">
+        <input type="hidden" id="accion" name="accion" value='archivo'>
+        <input type="hidden" id="id" name="id" value='25'>
+        <input type="hidden" id="precio" name="precio" value='50'>
+        <input type="hidden" id="nombre" name="nombre" value='Marcossss'>
+        <input type="hidden" id="cantidad" name="cantidad" value='100'>
+        <input type="hidden" id="genero" name="genero" value='Aventuda'>
+
+        <input type="submit" value="Modificar">
+    </form>
+</body>
+</html>
+
